@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+{% assign digests = site.digests | reverse %}
+
+{% if digests.size > 0 %}
+  {% assign lead = digests | first %}
+  <div class="lead-story">
+    <h2><a href="{{ lead.url | relative_url }}">{{ lead.title }}</a></h2>
+    <p class="story-meta">{{ lead.date | date: "%B %d, %Y &middot; %l:%M %p" }} &middot; {{ lead.categories | join: ", " }}</p>
+    <div class="story-excerpt">{{ lead.excerpt }}</div>
+  </div>
+
+  {% for digest in digests limit:10 offset:1 %}
+  <div class="story-item">
+    <h3><a href="{{ digest.url | relative_url }}">{{ digest.title }}</a></h3>
+    <p class="story-meta">{{ digest.date | date: "%B %d, %Y &middot; %l:%M %p" }}</p>
+    <div class="story-excerpt">{{ digest.excerpt }}</div>
+  </div>
+  {% endfor %}
+
+  <p class="all-link"><a href="{{ '/digests/' | relative_url }}">View all digests &rarr;</a></p>
+{% else %}
+  <p>No digests yet. The first one will appear after the next cron run.</p>
+{% endif %}

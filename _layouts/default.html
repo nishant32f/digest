@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  {% feed_meta %}
+  {% seo %}
+</head>
+<body>
+
+  <header class="masthead">
+    <hr class="masthead-rule">
+    <h1><a href="{{ '/' | relative_url }}" style="color: inherit; text-decoration: none;">{{ site.title }}</a></h1>
+    <p class="masthead-tagline">{{ site.description }}</p>
+    <p class="masthead-date">{{ site.time | date: "%A, %B %d, %Y" }}</p>
+    <hr class="masthead-rule-bottom">
+  </header>
+
+  <nav class="nav">
+    <a href="{{ '/' | relative_url }}">Latest</a>
+    <a href="{{ '/digests/' | relative_url }}">Archive</a>
+    <a href="{{ '/bookmarks/' | relative_url }}">Bookmarks</a>
+  </nav>
+
+  <main class="content-wrap">
+    {{ content }}
+  </main>
+
+  <footer class="site-footer">
+    <p>Auto-curated by OpenClaw &middot; Published on GitHub Pages</p>
+  </footer>
+
+</body>
+</html>

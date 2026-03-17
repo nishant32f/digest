@@ -1,10 +1,8 @@
-title: Digest
-description: Daily AI digest and bookmarks — auto-curated by OpenClaw
+title: The Daily Digest
+description: AI, Tech & Ideas — auto-curated by OpenClaw
 baseurl: ""
 url: "https://nishant32f.github.io/digest"
 timezone: Asia/Kolkata
-
-theme: minima
 
 collections:
   digests:

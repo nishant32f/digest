@@ -1,22 +1,17 @@
 ---
 layout: default
 ---
-<article class="digest">
+<article>
   <header>
     <h1>{{ page.title }}</h1>
-    <p class="meta">
-      {{ page.date | date: "%B %d, %Y %l:%M %p %Z" }}
-      {% if page.categories.size > 0 %}
-        · {{ page.categories | join: ", " }}
-      {% endif %}
-    </p>
+    <p class="meta">{{ page.date | date: "%B %d, %Y &middot; %l:%M %p %Z" }}{% if page.categories.size > 0 %} &middot; {{ page.categories | join: ", " }}{% endif %}</p>
   </header>
 
-  <div class="content">
+  <div class="body">
     {{ content }}
   </div>
 
   <footer>
-    <p><a href="{{ '/digests/' | relative_url }}">← All digests</a></p>
+    <a href="{{ '/digests/' | relative_url }}">&larr; All digests</a>
   </footer>
 </article>
