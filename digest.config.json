@@ -1,0 +1,28 @@
+{
+  "topics": [
+    "AI agents",
+    "LLM breakthroughs",
+    "AI coding assistants",
+    "open source AI models",
+    "AI startups funding",
+    "Claude Anthropic",
+    "OpenAI GPT",
+    "AI regulation policy"
+  ],
+  "people": [
+    "@kaboroevich",
+    "@ylecun",
+    "@AndrewYNg",
+    "@emaborev",
+    "@sama",
+    "@daboreo",
+    "@swyx",
+    "@karpathy"
+  ],
+  "schedule": {
+    "morning": "09:00 IST",
+    "evening": "21:00 IST"
+  },
+  "maxPostsPerDigest": 20,
+  "summaryStyle": "crisp, opinionated, no fluff — highlight what actually matters and why"
+}

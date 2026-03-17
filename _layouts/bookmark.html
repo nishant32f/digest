@@ -1,0 +1,25 @@
+---
+layout: default
+---
+<article class="bookmark">
+  <header>
+    <h1>{{ page.title }}</h1>
+    <p class="meta">
+      {{ page.date | date: "%B %d, %Y" }}
+      {% if page.source_url %}
+        · <a href="{{ page.source_url }}">Original →</a>
+      {% endif %}
+      {% if page.tags.size > 0 %}
+        · {{ page.tags | join: ", " }}
+      {% endif %}
+    </p>
+  </header>
+
+  <div class="content">
+    {{ content }}
+  </div>
+
+  <footer>
+    <p><a href="{{ '/bookmarks/' | relative_url }}">← All bookmarks</a></p>
+  </footer>
+</article>

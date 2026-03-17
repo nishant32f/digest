@@ -1,0 +1,31 @@
+title: Digest
+description: Daily AI digest and bookmarks — auto-curated by OpenClaw
+baseurl: ""
+url: "https://nishant32f.github.io/digest"
+timezone: Asia/Kolkata
+
+theme: minima
+
+collections:
+  digests:
+    output: true
+    permalink: /digests/:year/:month/:day/
+  bookmarks:
+    output: true
+    permalink: /bookmarks/:year/:month/:day/:title/
+
+defaults:
+  - scope:
+      path: ""
+      type: "digests"
+    values:
+      layout: "digest"
+  - scope:
+      path: ""
+      type: "bookmarks"
+    values:
+      layout: "bookmark"
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
